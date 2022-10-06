@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         PassengerCar bmw = new PassengerCar("bmw","bmw X5", 3.3f, 250);
+
         PassengerCar lada = new PassengerCar("lada","Granta", 1.8f, 180);
         PassengerCar uaz = new PassengerCar("UAZ","Patriot", 2.5f, 150);
         PassengerCar toyota = new PassengerCar("toyota","camri", 2.5f, 200);
@@ -34,14 +35,14 @@ public class Main {
         System.out.println("лучшее время "+bus2.bestTime(12.4f)+ " мин");
 
         Driver driver1 = new Driver("Иванов Иван Иванович");
-            driver1.setCategori("C");
-            driver1.setExperience(2f);
+        driver1.setCategori("C");
+        driver1.setExperience(2f);
         Driver driver2 = new Driver("Петров Петр Петрович");
-            driver2.setCategori("C");
-            driver2.setExperience(3f);
+        driver2.setCategori("C");
+        driver2.setExperience(3f);
         Driver driver3 = new Driver("Сидоров Сидр Сидорович");
-            driver3.setCategori("D");
-            driver3.setExperience(5.5f);
+        driver3.setCategori("D");
+        driver3.setExperience(5.5f);
 
         System.out.println(driver1);
 
@@ -56,6 +57,20 @@ public class Main {
         driver3.refueled(toyota);
         driver3.startMove(toyota);
         driver3.finishMove(toyota);
+        //_____________________________Д/З по Enum_____________________
+        System.out.println("___________________Д/З по ENUM___________________________");
+             bmw.setTypeBody(PassengerCar.TypeBody.TYPE_BODY_HATCHBACK);
+                System.out.println(bmw.getTypeBody());
+             System.out.println(lada.getTypeBody());
+
+             truck1.setTypeLoadCapacity(Truck.TypeLoadCapacity.N2);
+                System.out.println(truck1.getTypeLoadCapacity());
+                System.out.println(truck4.getTypeLoadCapacity());
+
+             bus2.setTypeCapacityPassenger(Bus.TypeCapacityPassenger.ECPECIALLY_LARGE);
+                System.out.println(bus2.getTypeCapacityPassenger());
+                System.out.println(bus1.getTypeCapacityPassenger());
+
 
 
     }
