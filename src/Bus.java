@@ -1,10 +1,12 @@
-public class Bus extends Car {
+public class Bus extends Car implements Competing {
     public int numberSeats; // число пассажирских мест
-
+    public final String CATEGORIA="E";
     public Bus(String brand, String model, float engineCapacity, int numberSeats) {
         super(brand, model, engineCapacity);
         this.numberSeats = numberSeats;
     }
+
+
 
     @Override
     public void startMovement() {
@@ -18,6 +20,11 @@ public class Bus extends Car {
     }
 
     @Override
+    public String printCategoria() {
+        return "E";
+    }
+
+    @Override
     public String toString() {
         return "Автобус{" +
                 " марки='" + brand + '\'' +
@@ -25,5 +32,20 @@ public class Bus extends Car {
                 ", объем двигателя=" + engineCapacity +
                 ", число мест=" + numberSeats +
                 '}';
+    }
+
+    @Override
+    public String pitStop() {
+        return getBrand()+" вершил Пит-стоп";
+    }
+
+    @Override
+    public float bestTime(float time) {
+        return time;
+    }
+
+    @Override
+    public float maxSpeed(float speed) {
+        return speed;
     }
 }

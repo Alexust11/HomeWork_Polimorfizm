@@ -1,4 +1,5 @@
 public abstract class Car {
+    public  String categoria;
     public String brand;
     public String model;
     public float engineCapacity;//объем двигателя
@@ -17,6 +18,7 @@ public abstract class Car {
         return model;
     }
 
+
     public float getEngineCapacity() {
         return engineCapacity;
     }
@@ -24,6 +26,9 @@ public abstract class Car {
     public abstract void startMovement();
 
     public abstract void finishMovement();
+
+    public abstract String printCategoria();
+
 
 
 }

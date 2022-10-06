@@ -1,4 +1,4 @@
-public class PassengerCar extends Car {
+public class PassengerCar extends Car implements Competing {
     public int maxSpeed;
 
     public PassengerCar(String brand, String model, float engineCapacity, int maxSpeed) {
@@ -18,6 +18,13 @@ public class PassengerCar extends Car {
     }
 
     @Override
+    public String printCategoria() {
+        return "B";
+    }
+
+
+
+    @Override
     public String toString() {
         return "Легковой автомобиль{" +
                 " марка='" + brand + '\'' +
@@ -25,5 +32,20 @@ public class PassengerCar extends Car {
                 ", объем двигателя=" + engineCapacity +
                 ", максимальная скорость=" + maxSpeed +
                 '}';
+    }
+
+    @Override
+    public String pitStop() {
+        return getBrand()+" вершил Пит-стоп";
+    }
+
+    @Override
+    public float bestTime(float time) {
+        return time;
+    }
+
+    @Override
+    public float maxSpeed(float speed) {
+        return speed;
     }
 }

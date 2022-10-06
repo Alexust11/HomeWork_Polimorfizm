@@ -28,6 +28,30 @@ public class Main {
         System.out.println(bus2);
         System.out.println(truck3);
 
+        System.out.println(bus1.pitStop());
+        System.out.println(truck4.pitStop());
+        System.out.println(lada.pitStop());
+        System.out.println("лучшее время "+bus2.bestTime(12.4f)+ " мин");
+
+        Driver driver1 = new Driver("Иванов Иван Иванович");
+            driver1.setCategori("C");
+            driver1.setExperience(2f);
+        Driver driver2 = new Driver("Петров Петр Петрович");
+            driver2.setCategori("D");
+            driver2.setExperience(3f);
+        Driver driver3 = new Driver("Сидоров Сидр Сидорович");
+            driver3.setCategori("E");
+            driver3.setExperience(5.5f);
+
+        System.out.println(driver1);
+
+        driver1.refueled(truck1);
+        driver1.startMove(truck1);
+        driver1.finishMove(truck1);
+
+        driver3.refueled(bus2);
+        driver3.startMove(bus2);
+        driver3.finishMove(bus2);
 
     }
 }
