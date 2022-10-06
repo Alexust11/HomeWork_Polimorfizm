@@ -11,7 +11,8 @@ public class Driver <D extends Car&Competing> {
     }
 
     public void startMove(D car) {
-        if (categori == car.printCategoria()) {
+        if (categori.equals(car.printCategoria())) {
+
             System.out.println("Водитель " + getFullName() + " начал движение на " + car.getBrand());
         } else {
             System.out.println("Водитель " + getFullName() + " не имеет прав на управление " + car.getBrand());
@@ -20,16 +21,16 @@ public class Driver <D extends Car&Competing> {
 
     }
 
-    public void finishMove(Car car) {
-        if (categori == car.printCategoria()) {
+    public void finishMove(D car) {
+        if (categori.equals(car.printCategoria()))  {
             System.out.println("Водитель " + getFullName() + " закончил движение на " + car.getBrand());
         } else {
             System.out.println("Водитель " + getFullName() + " не имеет прав на управление " + car.getBrand());
         }
     }
 
-    public void refueled(Car car) {
-        if (categori == car.printCategoria()) {
+    public void refueled(D car) {
+        if (categori.equals(car.printCategoria())) {
             System.out.println("Водитель " + getFullName() + " заправил " + car.getBrand());
         } else {
             System.out.println("Водитель " + getFullName() + " не имеет прав на управление " + car.getBrand());

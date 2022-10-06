@@ -35,7 +35,7 @@ public class Main {
 
         Driver driver1 = new Driver("Иванов Иван Иванович","C",2f);
         Driver driver2 = new Driver("Петров Петр Петрович", "C", 3);
-        Driver driver3 = new Driver("Сидоров Сидр Сидорович", "C", 5.5f);
+        Driver driver3 = new Driver("Сидоров Сидр Сидорович", "D", 5.5f);
 
         System.out.println(driver1);
 
