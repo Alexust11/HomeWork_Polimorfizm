@@ -4,5 +4,5 @@ public interface Competing {
     float bestTime(float time);
 
     float maxSpeed(float speed);
-
+    //-------------------------------
 }

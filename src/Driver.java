@@ -62,4 +62,5 @@ public class Driver <D extends Car&Competing> {
                 ", стаж=" + experience +
                 '}';
     }
+    //-------------------------------
 }

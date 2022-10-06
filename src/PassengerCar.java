@@ -80,4 +80,5 @@ public class PassengerCar extends Car implements Competing {
     public void setTypeBody(TypeBody typeBody) {
         this.typeBody = typeBody;
     }
+    //========================================
 }

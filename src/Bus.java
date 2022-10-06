@@ -56,7 +56,7 @@ public class Bus extends Car implements Competing {
     public void setTypeCapacityPassenger(TypeCapacityPassenger typeCapacityPassenger) {
         this.typeCapacityPassenger = typeCapacityPassenger;
     }
-
+    //________________________________________
     @Override
     public String toString() {
         return "Автобус{" +
@@ -81,4 +81,5 @@ public class Bus extends Car implements Competing {
     public float maxSpeed(float speed) {
         return speed;
     }
+
 }

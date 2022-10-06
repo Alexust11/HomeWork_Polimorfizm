@@ -76,4 +76,5 @@ public class Truck extends Car implements Competing {
     public float maxSpeed(float speed) {
         return speed;
     }
+    //================================
 }
