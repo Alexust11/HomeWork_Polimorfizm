@@ -1,6 +1,6 @@
 public class Bus extends Car implements Competing {
     public int numberSeats; // число пассажирских мест
-    public final String CATEGORIA="E";
+
     public Bus(String brand, String model, float engineCapacity, int numberSeats) {
         super(brand, model, engineCapacity);
         this.numberSeats = numberSeats;
@@ -21,7 +21,7 @@ public class Bus extends Car implements Competing {
 
     @Override
     public String printCategoria() {
-        return "E";
+        return "D";
     }
 
     @Override

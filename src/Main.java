@@ -37,10 +37,10 @@ public class Main {
             driver1.setCategori("C");
             driver1.setExperience(2f);
         Driver driver2 = new Driver("Петров Петр Петрович");
-            driver2.setCategori("D");
+            driver2.setCategori("C");
             driver2.setExperience(3f);
         Driver driver3 = new Driver("Сидоров Сидр Сидорович");
-            driver3.setCategori("E");
+            driver3.setCategori("D");
             driver3.setExperience(5.5f);
 
         System.out.println(driver1);
@@ -52,6 +52,10 @@ public class Main {
         driver3.refueled(bus2);
         driver3.startMove(bus2);
         driver3.finishMove(bus2);
+
+        driver3.refueled(toyota);
+        driver3.startMove(toyota);
+        driver3.finishMove(toyota);
 
     }
 }

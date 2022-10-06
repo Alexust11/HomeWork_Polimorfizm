@@ -1,6 +1,6 @@
 public class Truck extends Car implements Competing {
     public int loadCapacity; // грузоподъемность
-    public final String CATEGORIA="D";
+
     public Truck(String brand, String model, float engineCapacity, int loadCapacity) {
         super(brand, model, engineCapacity);
         this.loadCapacity = loadCapacity;
