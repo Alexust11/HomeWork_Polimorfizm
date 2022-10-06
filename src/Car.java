@@ -1,8 +1,7 @@
 public abstract class Car {
-    public  String categoria;
-    public String brand;
-    public String model;
-    public float engineCapacity;//объем двигателя
+    private String brand;
+    private String model;
+    private float engineCapacity;//объем двигателя
 
     public Car(String brand, String model, float engineCapacity) {
         this.brand = brand;

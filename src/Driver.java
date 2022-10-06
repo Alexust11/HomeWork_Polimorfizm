@@ -3,8 +3,10 @@ public class Driver <D extends Car&Competing> {
     private String categori;//категория B,C,D
     private float experience;//стаж
 
-    public Driver(String fullName) {
+    public Driver(String fullName, String categori, float experience) {
         this.fullName = fullName;
+        this.categori=categori;
+        this.experience=experience;
 
     }
 

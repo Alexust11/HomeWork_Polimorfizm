@@ -1,6 +1,6 @@
 public class PassengerCar extends Car implements Competing {
-    public int maxSpeed;
-    public static final String CATEGORIA_CAR = "B";
+    private int maxSpeed;
+    private static final String CATEGORIA_CAR = "B";
     public PassengerCar(String brand, String model, float engineCapacity, int maxSpeed) {
         super(brand, model, engineCapacity);
         this.maxSpeed = maxSpeed;
@@ -27,9 +27,9 @@ public class PassengerCar extends Car implements Competing {
     @Override
     public String toString() {
         return "Легковой автомобиль{" +
-                " марка='" + brand + '\'' +
-                ", модель='" + model + '\'' +
-                ", объем двигателя=" + engineCapacity +
+                " марка='" + getBrand() + '\'' +
+                ", модель='" + getModel() + '\'' +
+                ", объем двигателя=" + getEngineCapacity() +
                 ", максимальная скорость=" + maxSpeed +
                 '}';
     }

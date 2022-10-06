@@ -33,15 +33,9 @@ public class Main {
         System.out.println(lada.pitStop());
         System.out.println("лучшее время "+bus2.bestTime(12.4f)+ " мин");
 
-        Driver driver1 = new Driver("Иванов Иван Иванович");
-            driver1.setCategori("C");
-            driver1.setExperience(2f);
-        Driver driver2 = new Driver("Петров Петр Петрович");
-            driver2.setCategori("C");
-            driver2.setExperience(3f);
-        Driver driver3 = new Driver("Сидоров Сидр Сидорович");
-            driver3.setCategori("D");
-            driver3.setExperience(5.5f);
+        Driver driver1 = new Driver("Иванов Иван Иванович","C",2f);
+        Driver driver2 = new Driver("Петров Петр Петрович", "C", 3);
+        Driver driver3 = new Driver("Сидоров Сидр Сидорович", "C", 5.5f);
 
         System.out.println(driver1);
 
