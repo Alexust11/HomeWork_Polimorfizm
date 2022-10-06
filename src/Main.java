@@ -1,11 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        PassengerCar bmw = new PassengerCar("bmw","bmw X5", 3.3f, 250);
-        PassengerCar lada = new PassengerCar("lada","Granta", 1.8f, 180);
-        PassengerCar uaz = new PassengerCar("UAZ","Patriot", 2.5f, 150);
-        PassengerCar toyota = new PassengerCar("toyota","camri", 2.5f, 200);
+        PassengerCar bmw = new PassengerCar("bmw","bmw X5", 3.3f, 250, TypeBody.HATCHBACK);
+        PassengerCar lada = new PassengerCar("lada","Granta", 1.8f, 180, TypeBody.HATCHBACK);
+        PassengerCar uaz = new PassengerCar("UAZ","Patriot", 2.5f, 150, TypeBody.COUPE);
+        PassengerCar toyota = new PassengerCar("toyota","camri", 2.5f, 200, TypeBody.MINIVAN);
 
-
+        //---------------------------------------------------
+        System.out.println(" У автомобиля "+ bmw.getModel()+" кузов -"+bmw.getTypeBody().getType());
 
         //----------------------------------------------------
         Bus bus1 = new Bus("liaz","лиаз-5256", 6.65f, 23);

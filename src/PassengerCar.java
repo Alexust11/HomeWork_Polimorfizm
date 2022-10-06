@@ -1,9 +1,11 @@
 public class PassengerCar extends Car implements Competing {
     private int maxSpeed;
     private static final String CATEGORIA_CAR = "B";
-    public PassengerCar(String brand, String model, float engineCapacity, int maxSpeed) {
+    private TypeBody typeBody;
+    public PassengerCar(String brand, String model, float engineCapacity, int maxSpeed, TypeBody typeBody) {
         super(brand, model, engineCapacity);
         this.maxSpeed = maxSpeed;
+        this.typeBody=typeBody;
     }
 
     @Override
@@ -47,5 +49,21 @@ public class PassengerCar extends Car implements Competing {
     @Override
     public float maxSpeed(float speed) {
         return speed;
+    }
+
+    public TypeBody getTypeBody() {
+        return typeBody;
+    }
+
+    public void setTypeBody(TypeBody typeBody) {
+        this.typeBody = typeBody;
+    }
+
+    public void printType() {
+        if (typeBody == null) {
+            System.out.printf("Данные не указаны");
+        } else {
+            System.out.println(typeBody.getType());
+        }
     }
 }
