@@ -1,6 +1,6 @@
 public class Truck extends Car implements Competing {
     public int loadCapacity; // грузоподъемность
-
+    public static final String CATEGORIA_CAR = "C";
     public Truck(String brand, String model, float engineCapacity, int loadCapacity) {
         super(brand, model, engineCapacity);
         this.loadCapacity = loadCapacity;
@@ -18,7 +18,7 @@ public class Truck extends Car implements Competing {
 
     @Override
     public String printCategoria() {
-        return "C";
+        return CATEGORIA_CAR;
     }
 
 

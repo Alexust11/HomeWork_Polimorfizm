@@ -1,6 +1,6 @@
 public class Driver <D extends Car&Competing> {
     private String fullName;// ФИО
-    private String categori;//категория B,C,Е
+    private String categori;//категория B,C,D
     private float experience;//стаж
 
     public Driver(String fullName) {

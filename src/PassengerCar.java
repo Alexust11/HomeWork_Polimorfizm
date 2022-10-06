@@ -1,6 +1,6 @@
 public class PassengerCar extends Car implements Competing {
     public int maxSpeed;
-
+    public static final String CATEGORIA_CAR = "B";
     public PassengerCar(String brand, String model, float engineCapacity, int maxSpeed) {
         super(brand, model, engineCapacity);
         this.maxSpeed = maxSpeed;
@@ -19,7 +19,7 @@ public class PassengerCar extends Car implements Competing {
 
     @Override
     public String printCategoria() {
-        return "B";
+        return CATEGORIA_CAR;
     }
 
 
