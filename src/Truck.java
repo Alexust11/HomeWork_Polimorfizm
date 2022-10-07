@@ -1,9 +1,10 @@
 public class Truck extends Car implements Competing {
-    private int loadCapacity; // грузоподъемность
+    private  LoadCapacity capacity;// грузоподъемность
+
     private static final String CATEGORIA_CAR = "C";
-    public Truck(String brand, String model, float engineCapacity, int loadCapacity) {
+    public Truck(String brand, String model, float engineCapacity, LoadCapacity capacity) {
         super(brand, model, engineCapacity);
-        this.loadCapacity = loadCapacity;
+        this.capacity=capacity;
     }
 
     @Override
@@ -21,6 +22,9 @@ public class Truck extends Car implements Competing {
         return CATEGORIA_CAR;
     }
 
+    public LoadCapacity getLoadCapacity() {
+        return capacity;
+    }
 
     @Override
     public String toString() {
@@ -28,7 +32,7 @@ public class Truck extends Car implements Competing {
                 " марка='" + getBrand() + '\'' +
                 ", модель='" + getModel() + '\'' +
                 ", объем двигателя=" + getEngineCapacity() +
-                ", грузоподъемность=" + loadCapacity +
+                ", грузоподъемность=" + capacity +
                 '}';
     }
 
@@ -46,4 +50,6 @@ public class Truck extends Car implements Competing {
     public float maxSpeed(float speed) {
         return speed;
     }
+
+
 }

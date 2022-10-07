@@ -16,10 +16,10 @@ public class Main {
 
 
         //---------------------------------------------------------------------------------------
-        Truck truck1 = new Truck("Hino", "Hino 300", 3f, 4600);
-        Truck truck2 = new Truck("Hino", "Hino 700", 12.9f, 18000);
-        Truck truck3 = new Truck("GAZ","Валдай Next",2.8f, 4700);
-        Truck truck4 = new Truck("kamaz", "Компас", 3.76f, 5990);
+        Truck truck1 = new Truck("Hino", "Hino 300", 3f,LoadCapacity.N2);
+        Truck truck2 = new Truck("Hino", "Hino 700", 12.9f,LoadCapacity.N3 );
+        Truck truck3 = new Truck("GAZ","Валдай Next",2.8f, LoadCapacity.N1);
+        Truck truck4 = new Truck("kamaz", "Компас", 3.76f, LoadCapacity.N1);
 
         bmw.startMovement();
         bus1.finishMovement();
