@@ -20,6 +20,8 @@ public class Main {
         Truck truck2 = new Truck("Hino", "Hino 700", 12.9f,LoadCapacity.N3 );
         Truck truck3 = new Truck("GAZ","Валдай Next",2.8f, LoadCapacity.N1);
         Truck truck4 = new Truck("kamaz", "Компас", 3.76f, LoadCapacity.N1);
+        System.out.println("Грузовик "+truck3.getModel()+" вместимостью " + truck3.getLoadCapacity().getCapacity());
+
 
         bmw.startMovement();
         bus1.finishMovement();
