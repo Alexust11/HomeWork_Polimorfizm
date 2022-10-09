@@ -34,23 +34,25 @@ public class Main {
         System.out.println(lada.pitStop());
         System.out.println("лучшее время "+bus2.bestTime(12.4f)+ " мин");
 
-        Driver driver1 = new Driver("Иванов Иван Иванович","C",2f);
-        Driver driver2 = new Driver("Петров Петр Петрович", "C", 3);
-        Driver driver3 = new Driver("Сидоров Сидр Сидорович", "D", 5.5f);
+
+
+
+            Driver<Bus> driver4 = new Driver<>("Иванов Сидр Сидорович","D",2f);
+            Driver<PassengerCar> driver1 = new Driver<>("Иванов Иван Иванович","B",2f);
+            Driver<Truck> driver2 = new Driver<>("Петров Петр Петрович", "C", 3);
+
 
         System.out.println(driver1);
 
-        driver1.refueled(truck1);
-        driver1.startMove(truck1);
-        driver1.finishMove(truck1);
+        driver1.refueled(toyota);
+        driver1.startMove(lada);
+        driver1.finishMove(bmw);
+        driver4.refueled(bus4);
+        System.out.println("Стаж водителя "+ driver4.getFullName()+" "+ driver4.getExperience());;
+        System.out.println("водитель "+ driver2.getFullName()+" "+ driver2.pitStop());
 
-        driver3.refueled(bus2);
-        driver3.startMove(bus2);
-        driver3.finishMove(bus2);
 
-        driver3.refueled(toyota);
-        driver3.startMove(toyota);
-        driver3.finishMove(toyota);
+
 
 
     }

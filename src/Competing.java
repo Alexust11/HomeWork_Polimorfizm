@@ -1,5 +1,5 @@
 public interface Competing {
-    String pitStop();
+   String pitStop();
 
     float bestTime(float time);
 

@@ -1,4 +1,4 @@
-public class Driver <D extends Car&Competing> {
+public class Driver <D extends Car&Competing> implements Competing{
     private String fullName;// ФИО
     private String categori;//категория B,C,D
     private float experience;//стаж
@@ -57,6 +57,8 @@ public class Driver <D extends Car&Competing> {
         this.experience = experience;
     }
 
+
+
     @Override
     public String toString() {
         return "водитель{" +
@@ -64,5 +66,20 @@ public class Driver <D extends Car&Competing> {
                 ", категория='" + categori + '\'' +
                 ", стаж=" + experience +
                 '}';
+    }
+
+    @Override
+    public String pitStop() {
+        return "Заехал в бокс, заправился и сменил резину";
+    }
+
+    @Override
+    public float bestTime(float time) {
+        return time;
+    }
+
+    @Override
+    public float maxSpeed(float speed) {
+        return speed;
     }
 }
