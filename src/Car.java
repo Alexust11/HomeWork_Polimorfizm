@@ -28,6 +28,9 @@ public abstract class Car {
 
     public abstract String printCategoria();
 
+    public abstract boolean servise();
+
+
 
 
 }

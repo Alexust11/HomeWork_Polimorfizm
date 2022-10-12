@@ -24,6 +24,11 @@ public class PassengerCar extends Car implements Competing {
         return CATEGORIA_CAR;
     }
 
+    @Override
+    public boolean servise() {
+
+        return Math.random()>0.7;
+    }
 
 
     @Override

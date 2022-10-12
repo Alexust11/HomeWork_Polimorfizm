@@ -5,7 +5,7 @@ public class Driver <D extends Car&Competing> implements Competing{
 
     public Driver(String fullName, String categori, float experience) {
         this.fullName = fullName;
-        this.categori=categori;
+        setCategori(categori);
         this.experience=experience;
 
     }
@@ -50,6 +50,9 @@ public class Driver <D extends Car&Competing> implements Competing{
     }
 
     public void setCategori(String categori) {
+        if (categori == null) {
+            throw new IllegalArgumentException(" Необходимо указать категорию прав");
+        }
         this.categori = categori;
     }
 

@@ -33,9 +33,11 @@ public class Main {
         System.out.println(truck4.pitStop());
         System.out.println(lada.pitStop());
         System.out.println("лучшее время "+bus2.bestTime(12.4f)+ " мин");
-
-
-
+        System.out.println("_____________________________________________________________");
+        service(bmw,lada,toyota,uaz,
+                bus1,bus2,bus3,bus4,
+                truck1,truck2,truck3,truck4);
+        System.out.println("_____________________________________________________________");
 
             Driver<Bus> driver4 = new Driver<>("Иванов Сидр Сидорович","D",2f);
             Driver<PassengerCar> driver1 = new Driver<>("Иванов Иван Иванович","B",2f);
@@ -53,6 +55,26 @@ public class Main {
 
 
 
+
+
+    }
+
+    private static void service(Car... cars) {
+        for (int i = 0; i < cars.length; i++) {
+           // cars[i].servise();
+            serviceCar(cars[i]);
+        }
+    }
+
+    private static void serviceCar(Car car) {
+        try {
+            if (!car.servise()) {
+                throw new RuntimeException(" Автомобиль " + car.getBrand() + " " + car.getModel() + " диагностику не прошел");
+            }
+
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
 
 
     }

@@ -22,6 +22,11 @@ public class Truck extends Car implements Competing {
         return CATEGORIA_CAR;
     }
 
+    @Override
+    public boolean servise() {
+        return Math.random()>0.6;
+    }
+
     public LoadCapacity getLoadCapacity() {
         return capacity;
     }

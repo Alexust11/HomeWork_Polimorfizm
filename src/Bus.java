@@ -48,4 +48,10 @@ public class Bus extends Car implements Competing {
     public float maxSpeed(float speed) {
         return speed;
     }
+
+    @Override
+    public boolean servise() {
+        System.out.println(" Автобус" + getBrand()+ " "+getModel()+ " в диагностике не требуется");
+        return true;
+    }
 }
