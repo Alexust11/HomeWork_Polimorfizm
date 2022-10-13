@@ -24,4 +24,9 @@ public class Sponsor {
     public void sponsirovat() {
         System.out.println(getName()+ " спонсирует заезд на сумму "+getSumma());
     }
+
+    @Override
+    public String toString() {
+        return "Спонсор: " +getName()+", проспонсировал на сумму -"+getSumma();
+    }
 }

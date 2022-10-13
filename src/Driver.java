@@ -64,11 +64,7 @@ public class Driver <D extends Car&Competing> implements Competing{
 
     @Override
     public String toString() {
-        return "водитель{" +
-                "ФИО='" + fullName + '\'' +
-                ", категория='" + categori + '\'' +
-                ", стаж=" + experience +
-                '}';
+        return "водитель: " +"ФИО='" + fullName ;
     }
 
     @Override

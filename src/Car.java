@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public abstract class Car {
@@ -18,8 +19,8 @@ public abstract class Car {
 
     }
 
-    public void addDriver(Driver<?> driver) {
-        drivers.add(driver);
+    public void addDriver(Driver...drivers) {
+        this.drivers.addAll(Arrays.<Driver<?>>asList(drivers));
     }
     public void addMehanic(Mechanic<?>... mechanics) {
         this.mechanics.addAll(Arrays.asList(mechanics));

@@ -73,21 +73,39 @@ public class Main {
         Mechanic<Car> meh2=new Mechanic<>(" Кирилл "," Нкифоров ","RedWinks ");
         Mechanic<Truck> meh3=new Mechanic<>(" Игорь "," Кирилов ","1 TV ");
         List<Mechanic> mechanics = List.of(meh1, meh2, meh3);
-        toyota.addMehanic(meh1);
-        toyota.addSponsor(sponsor2);
-        toyota.addMehanic(meh1);
-        truck1.addMehanic(meh2);
+        toyota.addSponsor(sponsor2,sponsor1);
+        toyota.addMehanic(meh1,meh2);
         truck1.addSponsor(sponsor1,sponsor2);
         bus2.addMehanic(meh3);
         bus2.addSponsor(sponsor3);
         truck4.addMehanic(meh1,meh1);
         truck4.addSponsor(sponsor2,sponsor1);
+        toyota.addDriver(driver1, driver2);
         System.out.println("______________________________________");
-        System.out.println(toyota.getMechanics());
+        printInfo(toyota);
+
 
 
     }
 
+    private static void printInfo(Car car) {
+        System.out.println("Информация по "+car.getBrand()+" "+car.getModel());
+        System.out.println(" Водители:"+car.getDrivers());
+        System.out.println(" Механики:"+car.getMechanics());
+        System.out.println(" Спонсоры:"+car.getSponsors());
+
+//        for (Driver<?> driver : car.getDrivers()) {
+//            System.out.println(driver.getFullName());
+//        }
+//        System.out.println(" Механики:");
+//        for (Mechanic mechanic : car.getMechanics()) {
+//            System.out.println(mechanic.getName()+ " из компании "+ mechanic.getCompany());
+//        }
+//        System.out.println(" Информация по спонсорам:");
+//        for (Sponsor sponsor: car.getSponsors()) {
+//            System.out.println(sponsor.getName()+ " проспонсировал на сумму "+ sponsor.getSumma());
+//        }
+    }
     private static void service(Car... cars) {
         for (int i = 0; i < cars.length; i++) {
              serviceCar(cars[i]);

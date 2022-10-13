@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Mechanic <T extends Car>{
+public class Mechanic <T extends Car> {
     private String name;
     private String surname;
     private String company;
@@ -10,6 +10,7 @@ public class Mechanic <T extends Car>{
         this.surname = surname;
         this.company = company;
     }
+
     public boolean servise(T t) {
         return t.servise();
     }
@@ -17,6 +18,7 @@ public class Mechanic <T extends Car>{
     public void repair(T t) {
         t.repair();
     }
+
     public String getName() {
         return name;
     }
@@ -27,5 +29,10 @@ public class Mechanic <T extends Car>{
 
     public String getCompany() {
         return company;
+    }
+
+    @Override
+    public String toString() {
+        return " Механик: " + getName() + " " + getSurname() + " из компании " + getCompany();
     }
 }
