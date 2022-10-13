@@ -30,6 +30,11 @@ public class PassengerCar extends Car implements Competing {
         return Math.random()>0.7;
     }
 
+    @Override
+    public void repair() {
+        System.out.println(getBrand()+" "+ getModel()+ " отремонтирована");
+    }
+
 
     @Override
     public String toString() {
@@ -63,6 +68,7 @@ public class PassengerCar extends Car implements Competing {
     public void setTypeBody(TypeBody typeBody) {
         this.typeBody = typeBody;
     }
+
 
     public void printType() {
         if (typeBody == null) {

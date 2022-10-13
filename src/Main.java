@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         PassengerCar bmw = new PassengerCar("bmw","bmw X5", 3.3f, 250, TypeBody.HATCHBACK);
@@ -54,17 +56,41 @@ public class Main {
         driver4.refueled(bus4);
         System.out.println("Стаж водителя "+ driver4.getFullName()+" "+ driver4.getExperience());;
         System.out.println("водитель "+ driver2.getFullName()+" "+ driver2.pitStop());
+        //------------------------------------------------------------------------------------------------
 
+        truck1.addDriver(driver2);
+        System.out.println(truck1.getDrivers());
+        //_______________________________________________________________________________________________
+        Sponsor sponsor1 = new Sponsor("Тинькоф", 50000);
+        Sponsor sponsor2 = new Sponsor("Немироф", 60000);
+        Sponsor sponsor3 = new Sponsor("Елисеев", 70000);
+        //_______________________________________________________________________________________________
 
+        List<Car> cars = List.of(truck1, toyota, bus2, truck4);
+        List<Sponsor> sponsors = List.of(sponsor1, sponsor2, sponsor3);
 
+        Mechanic<Car> meh1=new Mechanic<>(" Василий "," Васильев ","RedBull ");
+        Mechanic<Car> meh2=new Mechanic<>(" Кирилл "," Нкифоров ","RedWinks ");
+        Mechanic<Truck> meh3=new Mechanic<>(" Игорь "," Кирилов ","1 TV ");
+        List<Mechanic> mechanics = List.of(meh1, meh2, meh3);
+        toyota.addMehanic(meh1);
+        toyota.addSponsor(sponsor2);
+        toyota.addMehanic(meh1);
+        truck1.addMehanic(meh2);
+        truck1.addSponsor(sponsor1,sponsor2);
+        bus2.addMehanic(meh3);
+        bus2.addSponsor(sponsor3);
+        truck4.addMehanic(meh1,meh1);
+        truck4.addSponsor(sponsor2,sponsor1);
+        System.out.println("______________________________________");
+        System.out.println(toyota.getMechanics());
 
 
     }
 
     private static void service(Car... cars) {
         for (int i = 0; i < cars.length; i++) {
-           // cars[i].servise();
-            serviceCar(cars[i]);
+             serviceCar(cars[i]);
         }
     }
 
