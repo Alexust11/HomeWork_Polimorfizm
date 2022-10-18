@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -93,6 +94,7 @@ public class Main {
         Mechanic<Car> meh2 = new Mechanic<>(" Кирилл ", " Нкифоров ", "RedWinks ");
         Mechanic<Truck> meh3 = new Mechanic<>(" Игорь ", " Кирилов ", "1 TV ");
         List<Mechanic> mechanics = List.of(meh1, meh2, meh3);
+
         toyota.addSponsor(sponsor2, sponsor1);
         toyota.addMehanic(meh1, meh2);
         truck1.addSponsor(sponsor1, sponsor2);
@@ -103,7 +105,10 @@ public class Main {
         toyota.addDriver(driver1, driver2);
         System.out.println("______________________________________");
         printInfo(toyota);
-
+        Sto sto=new Sto();
+        System.out.println("______________________________________");
+        sto.addPassengerCar(toyota);
+        sto.addTruck9(truck1);
 
     }
 
@@ -124,6 +129,19 @@ public class Main {
 //        for (Sponsor sponsor: car.getSponsors()) {
 //            System.out.println(sponsor.getName()+ " проспонсировал на сумму "+ sponsor.getSumma());
 //        }
+
+
+        //__________________________________________________________________________
+
+//        Добавьте новый класс «Станция техобслуживания», в которой реализована очередь из авто.
+//        Кроме этого, в классе есть методы «добавить авто в очередь» и «провести техосмотр авто».
+//         Напомним, что автобусы не нуждаются в техобслуживании перед заездом, поэтому они в очередь не встают.
+//        Каждый новый объект становится в конец очереди на техобслуживание.
+//        Как только машина проходит техобслуживание, она должна из очереди удаляться.
+
+
+
+
     }
 
     private static void service(Car... cars) {
@@ -144,4 +162,8 @@ public class Main {
 
 
     }
+
+
+
+
 }
